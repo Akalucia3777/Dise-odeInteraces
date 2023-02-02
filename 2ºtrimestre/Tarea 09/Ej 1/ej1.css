@@ -1,0 +1,54 @@
+#cuad1{
+    width: 40%;
+    height: 200px;
+    background-color: blue;
+    font-size: 50px;
+    color:white;
+    display: inline-flex;
+    vertical-align: top;
+}
+
+#cuad2{
+    width: 30%;
+    height: 100px;
+    background-color: yellow;
+    font-size: 45px;
+    display: inline-flex;
+    vertical-align: top;
+}
+
+#cuad3{
+    width: 20%;
+    height: 50px;
+    background-color: pink;
+    font-size: 30px;
+    display: inline-flex;
+    vertical-align: top;
+}
+
+
+@media (max-width:700px) {
+    #cuad1{
+        width: 40%;
+        height: 200px;
+        background-color: blue;
+        font-size: 50px;
+    }
+    #cuad2{
+        width: 30%;
+        height: 100px;
+        background-color: yellow;
+        font-size: 45px;
+    }
+
+    #cuad3{
+        width: 20%;
+        height: 50px;
+        background-color: pink;
+        font-size: 30px;
+    }
+}
+
+@media (max-width:400px) {
+    
+}
