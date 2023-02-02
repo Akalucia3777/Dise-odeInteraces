@@ -1,0 +1,182 @@
+/*
+    Sintaxis del css
+    {atributo:valor;} 
+*/
+
+/** Selectores en Css **/
+
+/*! Selector Universal !*/
+*{/* Todo el texto se pondra en gris */
+    color:grey;}
+h1{/* Todo los h1 se pondran en gris */
+    color:grey}
+
+/*! Selectores Descendentes !*/
+/* El estilo se aplica a todos los elementos "p","a","span","em" */
+p,a,span,em{text-decoration: underline;}
+
+/* El estilo se solo a los elementos "em" que se encuentran dentro de "p a span " */
+p a span em{text-decoration: underline;}
+
+/* 
+    El * se refiere a un elemento cualquiera entre 
+    p y a por lo que solo se aplica 
+    a lo que haya entre p y a 
+*/
+p * a{color:red;}
+
+/*! Selectores de Clase !*/
+/* 
+    Son los mas utilizados, en la misma pagina
+    de html varios elementos pueden utilizar el 
+    mismo valor en el atributo class 
+*/
+.aviso{border:1px solid #0000;}
+
+/* A veces es necesario reestringir estos selectores para especificar en un elemento en concreto */
+/* Se aplica a todos los elementos del tipo "p" con atributo class="aviso" */
+p.aviso{color:grey;}
+
+/* Se aplicará a los elementos con clase "aviso" que se encuentren dentro de un párrafo */
+p .aviso{color:grey;}
+
+/* Se aplicará a los elementos con clase "aviso" que se encuentren dentro de un párrafo */
+p, .aviso{color:grey;}
+
+
+/*! Selectores de ID !*/
+/*
+    Se usan para aplicar estilos a un unico elemento de la pagina,no se puede repetir en 2 elementos
+    diferentes de una misma pagina.
+    La sintaxis es igual que la clase solo que en vez de "." usamos "#"
+*/
+#aviso{border:1px solid #0000;}
+
+/* A veces es necesario reestringir estos selectores para especificar en un elemento en concreto */
+/* Se aplica a todos los elementos del tipo "p" con atributo id="aviso" */
+p#aviso{color:grey;}
+
+/* Se aplicará a los elementos con ID "aviso" que se encuentren dentro de un párrafo */
+p #aviso{color:grey;}
+
+/* Se aplicará a los elementos con ID "aviso" que se encuentren dentro de un párrafo */
+p, #aviso{color:grey;}
+
+/*! Selectores de hijos !*/
+/*
+    Selecciona un elemento que es hijo de otro
+*/
+
+div > p{color:white;}/* El estilo se aplica a todos los parrafos hijos de un div */
+
+
+/** Unidades de medida en Css **/
+/* 
+    Hay dos unidades de medida en Css, las relativas y las absolutas
+    Las relativas definen su valor en relacion a otra medida.
+    Las absolutas establecen la forma completa del valor de una medida.
+*/
+
+/*! Unidades absolutas !*/
+/*  Su valor es el que se debe utilizar sin necesidad de realizar calculos intermedios.
+    !Pero son muy poco flexibles y no se adaptan facilmente.
+    El pt, es la que mas se suele usar.
+*/
+
+/* in,pulgadas("inches")equivale a 2.54cm */
+body{margin:0.5in;}
+
+/* cm,centimetros. */
+h1{line-height: 2cm;}
+
+/* mm,milímetros */
+p{word-spacing: 4mm;}
+
+/* pt,puntos. Un punto equivale a 1 pulgada/72, es decir, unos 0.35 milímetros */
+a{font-size: 12pt;}
+
+/* pc,picas. Una pica equivale a 12 puntos,es decir, unos 4.23 milímetros */
+span{font-size: 1pc;}
+
+/*! Unidades relativas !*/
+/* Siempre mantienen las proporciones del diseño de la página */
+
+/* em, relativa al tamaño de la letra del elemento */
+body{margin:0.5em;}
+
+/*ex, relativa respecto de la altura de la letra x del tipo y tamaño de letra del elemento. */
+h1{line-height: 2ex;}
+
+/* px,pixel relativa respecto de la resolucion de la pantalla del dispositivo el que se visualiza la pagina HTML */
+p{word-spacing: 4px;}
+
+/* %, valor numerico seguido del simbolo % siempre esta referenciado a otra medida */
+a{font-size: 12%;}
+
+/* pc,picas. Una pica equivale a 12 puntos,es decir, unos 4.23 milímetros */
+span{font-size: 1pc;}
+
+
+/** Colores en Css **/
+
+/*
+    Palabras clave: red,blue,green...
+    RGB decimal: 153,255,0
+    RGB porcentual: R 244 H 339 º
+                    G 119 S 51 %
+                    B 162 V 96 %
+    RGB hexadecimal: #99ff00
+*/
+
+
+/** Modelo de Cajas **/
+/*
+    Los navegadores crean y colocan cajas con cada etiqueta que añadas al html,
+    css nos permite modificar estas cajas.
+    Cada caja esta formada por 6 partes:
+        Contenido: contenido del elemento del HTML.
+        Relleno(padding):espacio libre opcional existente entre el contenido y el borde.
+        Borde(border): linea que encierra al contenido y su relleno.
+        Imagen de fondo(background image):imagen que se muestra por detras del contenido y el relleno.
+        Color de fondo(background color):color que se muestra por detras del contenido y el relleno.
+        Margen(margin):separacion opcional existente entre la caja y el resto de cajas.
+*/
+
+/*? Propiedad Width
+        No admite valores negativos y los porcentajes se calculan a partir de la anchura de su elemento padre.
+        El valor inherit indica que la anchura del elemento se hereda de su elemento padre.
+        El valor auto, indica que sea el navegador el que calcule la anchura automaticamente.(inicial)
+*/
+
+/*? Propiedad Height
+        No admite valores negativos y los porcentajes se calculan a partir de la altura de su elemento padre.
+        El valor inherit indica que la altura del elemento se hereda de su elemento padre.
+        El valor auto, indica que sea el navegador el que calcule la altura automaticamente.(inicial)
+*/
+
+/*? Propiedad Margen(margin)
+        Las unidades mas usadas son los pixeles para una precision total, los em pra diseños que 
+        mantengan las proporciones y porcentajes para diseños fluidos.
+        etiquetas: margin-top,margin-left,margin-right,margin-bottom.
+        Si solo se pone la etiqueta margin..
+            Si solo es un valor se pondra ese en los 4 lados.
+            Si se pone dos el valor se asignara al margen superior e inferior y el segundo al
+            los margenes izquierdo y derecho
+            Si se indican tres valores, el primero se asignara al margen superior, el tercero
+            al inferior y el segundo a los margenes izquierdo y derecho.
+            Si se indican los 4 valores el orden es,superior,derecho,inferior,izquierdo.
+*/
+
+/*? Propiedad Relleno(padding)
+        Etiquetas: padding-top,padding-left,padding-right,padding-bottom.
+        Si solo se pone la etiqueta padding..
+            Si solo es un valor se pondra ese en los 4 lados.
+            Si se pone dos el valor se asignara al padding superior e inferior y el segundo al
+            los padding izquierdo y derecho
+            Si se indican tres valores, el primero se asignara al padding superior, el tercero
+            al inferior y el segundo a los padding izquierdo y derecho.
+            Si se indican los 4 valores el orden es,superior,derecho,inferior,izquierdo.
+*/
+
+
+

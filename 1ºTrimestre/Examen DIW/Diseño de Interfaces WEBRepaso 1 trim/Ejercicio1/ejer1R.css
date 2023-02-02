@@ -1,0 +1,140 @@
+div{
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.float1{
+    background-color: orange;
+    border:1px solid black;
+    height: 400px;
+    width: 300px;
+    float: right;
+    display:table;
+}
+
+.float1 p{
+    display: table-cell;
+    vertical-align: top;
+    text-align: center;
+    
+}
+
+.float2{
+    background-color: yellow;
+    border: 2px solid black;
+    height: 400px;
+    width: 300px;
+    float: left;
+    display:table;
+}
+
+.float2 p{
+    display: table-cell;
+    vertical-align: top;
+    text-align: center;
+}
+
+.absoluto{
+    background-color: green;
+    color: aliceblue;
+    height: 250px;
+    width: 130px;
+    position: absolute;
+    top: 120px;
+    left:500px;
+}
+
+.C1{
+    background-color: black;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 0px;
+    right:700px;
+    color:aliceblue;
+    z-index: 2;
+
+    display:table;
+    justify-content: left;
+}
+
+.C1 p{
+    display: table-cell;
+    vertical-align: top;
+    text-align: center;
+}
+
+.C2{
+    background-color: gray;
+    color:aliceblue;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 25px;
+    right:630px;
+    z-index: 3;
+
+    display:table;
+    justify-content: left;
+}
+
+.C2 p{
+    display: table-cell;
+    vertical-align: bottom;
+    text-align: left;
+}
+
+.C3{
+    background-color: lightgrey;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 35px;
+    right:730px;
+    border:1px solid black;
+    z-index: 0;
+    display:table;
+    justify-content: left;
+}
+.C3 p{
+    display: table-cell;
+    vertical-align: bottom;
+    text-align: left;
+}
+
+.relativo{
+    background-color:pink;
+    border:1px solid black;
+    width:500px;
+    height: 60px;
+    position: relative;
+    top: 300px;
+    left: 900px;
+    z-index: 2;
+
+    display: table;
+}
+
+.relativo p{
+    display: table-cell;
+    vertical-align: top;
+    text-align: center;
+}
+
+.estatico{
+    margin-top: 350px;
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    color:red;
+    position: static;
+    display:table;
+}
+
+.estatico p{
+    display: table-cell;
+    vertical-align: top;
+    text-align: center;
+}

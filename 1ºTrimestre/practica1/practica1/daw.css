@@ -1,0 +1,92 @@
+*{
+    background-color: #fbd8a6;
+}
+body{
+    margin-top: 0;
+    margin-left: 0;
+}
+/* Encabezado */
+#titulo{
+    font-size: 120px;
+    color: antiquewhite;
+    font-family: 'Trebuchet MS';
+    text-align: right;
+    background-color: peru;
+}
+#img1{
+    height: 150px;
+    border-radius: 15px;
+}
+#limg{
+    background-color: peru;
+}
+#enca{
+    width:100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+#encabimg{
+    text-align: left;
+    padding: 20px;
+    width: 33%;
+    font-size: 20px;
+    background-color: peru;
+}
+.encabezado{
+    padding: 20px;
+    width: 33%;
+    font-size: 20px;
+    background-color: peru;
+    border-top: 3px solid #b5512a;
+    border-right: 3px solid #b5512a;
+}
+.encabezado:hover {background-color: #fbd8a6;border-bottom: 3px solid #b5512a;}
+#lcab:hover{background-color: #fbd8a6;border-bottom: 3px solid #b5512a;}
+#lcab{
+    background-color: peru;
+    color: blanchedalmond;
+    font-size: 30px;
+}
+#otra{
+    margin-top: 20px;
+    width: 100%;
+    height: 450px;
+    text-align:center;
+    border-collapse: collapse;
+    border:5px solid #403121;
+    color: antiquewhite;
+}
+td{
+    border:2px solid #403121;
+}
+#l1{
+    width: 8px;
+    background-color: #A65E09;
+    color: antiquewhite;
+    font-size: 25px;
+}
+#dis:hover {background-color: coral;}
+#des:hover {background-color: coral;}
+#eds:hover {background-color: coral;}
+#edc:hover {background-color: coral;}
+#emp:hover {background-color: coral;}
+#ing:hover {background-color: coral;}
+#dis{
+    background-color: aquamarine;
+    color: #403121;
+}
+#des{
+    background-color: darkgrey;
+}
+#eds{
+    background-color: chocolate;
+}
+#edc{
+    background-color: rgb(8, 128, 128);
+}
+#emp{
+    background-color: crimson;
+}
+#ing{
+    background-color: blueviolet;
+}

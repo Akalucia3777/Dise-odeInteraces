@@ -1,0 +1,47 @@
+img{
+    height: 100px;
+    float: left;
+}
+table{
+    text-align: center;
+    width:800px;
+    border-collapse: collapse;
+                                    /* El ultimo numero es para hacerlo semitransparente */
+    border: 1px solid rgb(0, 90, 0,0.5) ;
+    background-color: rgb(85, 132, 85);
+}
+
+th{
+    border: 1px solid rgb(0, 90, 0,0.5);
+    font-size: 20px;
+    color: aliceblue;
+    padding: 10px;
+    
+}
+
+th span{
+    filter:opacity(70%);
+}
+
+th .med{
+    filter:opacity(70%);
+    position: relative;
+    top: 40px;
+    right: 40px;
+}
+
+th .med2{
+    filter:opacity(70%);
+    position: relative;
+    top: 40px;
+    right: 40px;
+}
+
+td{
+    border: 1px solid rgb(0, 90, 0,0.5) ;
+    background-color: rgb(173, 255, 173);
+}
+
+#borde{
+    border-top: 2px solid rgb(0, 90, 0);
+}

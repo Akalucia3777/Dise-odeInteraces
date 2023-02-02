@@ -1,0 +1,63 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+div{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-size: 20px;
+}
+.cont1{
+    background-color: lightblue;
+}
+
+.cont1:hover{
+    animation: div1 2s ease-out;
+}
+
+@keyframes div1 {
+    0%{
+        background-color: lightblue;
+    }
+    100%{
+        background-color: blue;
+        font-size:30px;
+    }
+}
+
+.cont2{
+    background-color: lightpink;
+}
+
+.cont2:hover{
+    animation: div2 2s linear;
+}
+
+@keyframes div2 {
+    0%{
+        border:0px solid black;
+    }
+    100%{
+        border:4px solid coral;
+        color:crimson;
+    }
+}
+
+.cont3{
+    background-color: lightgreen;
+}
+
+.cont3:hover{
+    animation: div3 2s ease-in;
+}
+
+@keyframes div3 {
+    0%{
+        opacity:100%;
+    }
+    100%{
+        opacity:50%;
+        transform:translate(100px,100px) ;
+    }
+}

@@ -1,0 +1,468 @@
+/* * SELECTORES * */
+/* *Selector universal * */
+
+*{ margin: 0;}
+
+/* * Selector de etiqueta * */
+
+p{ font-size: 15px;}
+
+/* * Comnbinacion de selectores * */
+/*Si se quiere aplicar los mismos estilos a dos etiquetas diferentes*/
+h1, h2 { color: red;}
+
+/* * Selector descendente * */
+/* ! No confundir con combinacion de selectores*/
+/*Selecciona los elementos que se encuentran dentro de otros elementos. Un
+elemento es descendiente de otro cuando se encuentra entre las etiquetas de
+apertura y de cierre del otro elemento.*/
+
+div p {
+    font-style: italic;
+}
+
+/* El estilo se aplica solo a los elementos "em" que se encuentran dentro de "p a span"*/
+
+p a span em {text-decoration: dotted;}
+
+/* * Selectores de clase * */
+/*varios elementos diferentes pueden utilizar el mismo valor en el atributo class.*/
+.clase{
+    padding: 0.5em;
+    border: 1px solid black;
+}
+
+/* En ocasiones, es necesario restringir el alcance del selector de clase →
+Combinando el selector de tipo y el selector de clase, se obtiene un selector
+mucho más específico. */
+
+/* Todso los elementos de tipo "p" con atributo class="clase" */
+p.aviso{
+    font-size: 10px;
+}
+
+/* * Selector de ID * */
+/*Al igual que los selectores de clase, en este caso también se puede restringir el alcance
+del selector mediante la combinación con otros selectores.*/
+
+/* Todso los elementos de tipo "p" con atributo id="aviso" */
+p#aviso{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* * Selector de hijos * */
+/*Se usa para seleccionar un elemento que es hijo de otro elemento.*/
+/* selector 1> selector2 {atributo:valor}  El estilo se aplica en el selector 2*/
+
+/*Se trata de un selector similar al selector descendente, pero muy diferente en su funcionamiento. 
+Se utiliza para seleccionar un elemento que es hijo de otro elemento y se indica mediante el "signo de mayor que" (>).
+
+Mientras que en el selector descendente sólo importa que un elemento esté dentro de otro, 
+independientemente de lo profundo que se encuentre, en el selector de hijos el elemento debe ser hijo directo 
+de otro elemento.*/
+
+/*
+p > span { color: blue; }
+
+Este si es span hijo dijecto de p, por lo que si se aplicaria
+<p>
+  <span>Texto1</span>
+</p>
+
+Este no es span hijo dijecto de p, por lo que no se aplicaria
+<p>
+  <a href="#">
+    <span>Texto2</span>
+  </a>
+</p>
+*/
+div > p {color: white;}
+
+/* * Combinacion de selectores basicos * */
+
+/*CSS permite la combinación de uno o más tipos de selectores para restringir el alcance de las reglas CSS.
+La combinación de selectores puede llegar a ser todo lo compleja que sea necesario.*/
+
+.aviso .especial{ color: blueviolet}
+div.aviso span.especial{ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+
+/* * UNIDADES DE MEDIDA * */
+/* Unidades absolutas*/
+/*No son adaptables a diferentes medios*/
+body{ margin: 0.5in} /* inches */
+h1{ line-height: 2cm;} /* centimetros */
+p{ word-spacing: 4mm;} /* milimetros */
+a{font-size: 12pt;} /* puntos */
+span{font-size: 1pc;} /*pica*/
+
+/*Unidades relativas*/
+h2{ line-height: 2em;} /* hace referencia al tamaño en puntos de la letra que se está utilizando. */
+p{ word-spacing: 4ex;} /* relativa respecto de la altura de la letra x del tipo y tamaño de letra del elemento. */
+a{font-size: 12px;} /* relativa respecto de la resolución de la pantalla del dispositivo en el que se visualiza. */
+span{font-size: 1%;} /* valor numérico seguido del símbolo % y siempre está referenciado a otra medida.*/
+
+/* * Colores * */
+
+/* Palabras clave: red, blue, black...*/
+/* RGB decimal: rgb(red, green, blue) los valores red, green y blue van del 0 al 255*/
+/* RGB porcentual: */
+/* Hexadecimal: #FF0000 */
+
+/* * MODELO DE CAJAS * */
+
+/*  Los navegadores crean y colocan las cajas de forma automática, pero CSS permite
+    modificar todas sus características. Cada una de las cajas está formada por seis
+    partes:
+      - Contenido (content): se trata del contenido HTML del elemento (las palabras de
+      un párrafo, una imagen, el texto de una lista de elementos, etc.)
+      - Relleno (padding): espacio libre opcional existente entre el contenido y el borde.
+      - Borde (border): línea que encierra completamente el contenido y su relleno.
+      - Imagen de fondo (background image): imagen que se muestra por detrás del
+      contenido y el espacio de relleno.
+      - Color de fondo (background color): color que se muestra por detrás del
+      contenido y el espacio de relleno.
+      - Margen (margin): separación opcional existente entre la caja y el resto de cajas
+      adyacentes.*/
+
+/* Propiedad width
+        No admite valores negativos y los porcentajes se calculan a partir de la anchura de su elemento padre.
+        El valor inherit indica que la anchura del elemento se hereda de su elemento padre.
+        El valor auto, indica que sea el navegador el que calcule la anchura automaticamente.(inicial)
+*/
+
+/* Propiedad height
+        No admite valores negativos y los porcentajes se calculan a partir de la altura de su elemento padre.
+        El valor inherit indica que la altura del elemento se hereda de su elemento padre.
+        El valor auto, indica que sea el navegador el que calcule la altura automaticamente.(inicial)
+*/
+
+/* Propiedad margin
+  Las unidades mas usadas son los pixeles para una precision total, los em pra diseños que 
+  mantengan las proporciones y porcentajes para diseños fluidos.
+  etiquetas: margin-top,margin-left,margin-right,margin-bottom.
+  Si solo se pone la etiqueta margin..
+      Si solo es un valor se pondra ese en los 4 lados.
+      Si se pone dos el valor se asignara al margen superior e inferior y el segundo al
+      los margenes izquierdo y derecho
+      Si se indican tres valores, el primero se asignara al margen superior, el tercero
+      al inferior y el segundo a los margenes izquierdo y derecho.
+      Si se indican los 4 valores el orden es,superior,derecho,inferior,izquierdo.
+*/
+
+/* Propiedad padding
+  Etiquetas: padding-top,padding-left,padding-right,padding-bottom.
+  Si solo se pone la etiqueta padding..
+      Si solo es un valor se pondra ese en los 4 lados.
+      Si se pone dos el valor se asignara al padding superior e inferior y el segundo al
+      los padding izquierdo y derecho
+      Si se indican tres valores, el primero se asignara al padding superior, el tercero
+      al inferior y el segundo a los padding izquierdo y derecho.
+      Si se indican los 4 valores el orden es,superior,derecho,inferior,izquierdo.
+*/
+
+
+/* Propiedad Border
+  Etiquetas: 
+      Se le añade - y width,color etc para añadir ,mas cosas.
+      border-top,border-right,border-bottom,border-left. 
+      border-style: none,hidden,dotted,solid,double,groove,ridge,inset,outset.
+  Las propiedades shorthand:
+      border:1px solid red;
+*/
+
+/* Propiedad background
+  Color de Fondo:
+          background-color: "un color" | "transparent" | "inherit"
+  Imagen de Fondo:
+          background-image: url("ruta")
+          background-repeat: repeat | repeat-x | repeat-y | no-repeat | inherit
+          background-position: (porcentaje/unidad de medida/left/center/right)||(porcentaje/unidad de medida/left/center/right)||(left/center/right)||(left/center/right)
+                          -Si ponemos 2 porcentajes o medidas se indica el desplazamiento horizontal y el segundo el vertical respecto al origen
+                          -Su ponemos 1 porcentaje o medida se considera que es el desplazamiento horizontal y al vertical se le asigna el valor de 50%
+          background-attachment:scroll||fixed||inherit
+
+          Ejemplo:
+              #caja1{
+                  background-image:url("imges/help.png");
+                  background-repeat:no-repeat;
+                  background-position:50% 50%;
+              }
+          Ejemplo shorthand:
+              body{background: #222d2d url(./graphics/colorstrip.gif) repeat-x 0 0;}
+*/
+
+/* * POSICIONAMIENTO* */
+
+/* Normalmente, cuando se posiciona una caja también es necesario desplazarla
+respecto de su posición original o respecto de otro origen de coordenadas. CSS
+define cuatro propiedades llamadas top, right, bottom y left para controlar el
+desplazamiento de las cajas posicionadas.*/
+
+/** Position Relative**/
+/*! OJO para que funcione un position relative, tiene que estar dentro de un elemento con position absolute*/
+
+/*El posicionamiento relativo desplaza una caja respecto de su posición original
+establecida mediante el posicionamiento normal. El desplazamiento de la caja
+se controla con las propiedades top, right, bottom y left.
+
+Si se utilizan valores negativos en las
+propiedades top, right, bottom y left, su efecto es justamente el inverso.
+*/
+
+img.desplazada{
+  position: relative;
+  top: 20px;
+}
+
+/** Position absolute **/
+
+/*El posicionamiento absoluto se emplea para establecer de forma exacta la posición
+en la que se muestra la caja de un elemento. La nueva posición de la caja se indica
+mediante las propiedades top, right, bottom y left.
+
+Cuando una caja se posiciona de forma absoluta, el resto de elementos de la página
+se ven afectados y modifican su posición.
+*/
+
+div img{
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+/**Position static**/
+
+/*El posicionamiento fijo hace que las cajas no modifiquen su posición ni aunque el usuario suba o
+baje la página en la ventana de su navegador.*/
+
+/* * Float * */
+/*Cuando se posiciona una caja de forma flotante la caja deja de pertenecer al
+flujo normal de la página, lo que significa que el resto de cajas ocupan el lugar
+dejado por la caja flotante.
+
+float:
+  left lo mueve a la izq
+  right lo mueve a la der
+  none
+  inherit*/
+
+/* * Clear * */
+/*clear:(modifica el comportamiento del posicionamiento flotante y fuerza a un elemento a mostrarse debajo de una caja flotante)
+  none
+  left: el elemento se desplaza de forma descendente hasta que pueda colocarse en una linea sin caja flotante en el lado izquierdo
+  right: igual pero se tienen en cuenta los elementos desplazados a la derecha
+  both: despeja ambos lados y desplaza al elemento de forma descendente hasta que deje de chocar con un elemento flotante
+*/
+
+/* * Display * */
+/* display:
+    inline: visualiza el elemento en linea
+    block: muestra el elemento como un bloque
+    none: oculta el elemento y este desaparece de la pagina
+    inline-block
+*/
+
+/* * Visibility * */
+/*  visible
+    hidden: convierte una caja en invisible, se queda el hueco vacio
+    collapse: solo en filas o columna de tablas, oculta una fila o columna y muestra otros contenidos en el lugar*/
+
+/* * Overflow * */
+/*  -visible: el contenido no se corta y se muestra sobresaliendo la zona reservada
+              para visualizar el elemento. Este es el comportamiento por defecto.
+    - hidden: el contenido sobrante se oculta y sólo se visualiza la parte del
+              contenido que cabe dentro de la zona reservada para el elemento.
+    - scroll: solamente se visualiza el contenido que cabe dentro de la zona
+              reservada para el elemento, pero también se muestran barras de scroll que
+              permiten visualizar el resto del contenido.
+    - auto: el comportamiento depende del navegador, aunque normalmente es el
+            mismo que la propiedad scroll.*/
+
+/* * Z-index * */
+/*Cuanto más alto sea el valor numérico, más cerca del usuario se muestra la caja. Por
+ejemplo, un elemento con z-index: 10 se muestra por encima de los elementos con z-index: 8
+o z-index: 9, pero por debajo de elementos con z-index: 20 o z-index: 50.*/
+
+/* * Tipografia * */
+
+/**color*/
+p{color: black;}
+
+/** tipo de letra*/
+p{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/**Tamaño de letra*/
+p{
+  font-size: 20px;
+}
+
+/**Anchura*/
+p{
+  font-weight: bold;
+}
+
+/**Estilo*/
+p{
+  font-style: italic;
+}
+
+/* * ENLACES * */
+/*
+    Para los enlaces se puede cambiar la decoracion del texto.
+    Para cambiar la decoracion se usa text-decoration --> a{text-decoration:none/overline/underline;}
+    Para cambiar la anchura de la letra se usa font-weight --> a{font-weight: bold;}
+    Para cambiar el borde inferior seria --> a{border-bottom:medium solid #CC0000;}
+?   Añadir imagenes a los enlaces:
+    Aparecera en naranja subrayado con la imagen a la izquierda en el centro.
+        .rss{
+            color:#E37529;
+            padding:0 0 0 18px;
+            background:#FFF url(images/rss.gif) no repeat left center;
+        }
+*/
+
+/* * LISTAS * */
+
+/**list-style-type*/
+/*Para cambiar el tipo de lista:
+disc | circle | decimal | decimal-leading-zero | lower-roman |
+upper-roman | lower-greek | lower-latin | upper-latin | armenian | georgian |
+lower-alpha | upper-alpha | none |inherit 
+*/
+
+/**list-style-image*/
+/*Cuando se requiere personalizar el aspecto de las viñetas*/
+ul.ok{list-style-image:url("imagenes/ok.png")}
+
+/*?Para agrupar estas propiedades seria asi ul{list-style:type position image}*/
+/*?Para hacer una lista en horizontal se pone el display inline / inline-block*/
+
+/* * FORMS * */
+/*
+  Se usan los padding / display / margin / float
+  Lo ideal es meter cada label e input en un div para controlarlo mejor con floats
+  Existe una etiqueta fieldset donde puedes crear distintos limitadores para el form, esta etiqueta va dentro de la de form.
+? Para resaltar campos que el usuario clickee se usa el focus
+  Esto cambiara los input a un borde mas ancho y otro color de fondo
+  input:focus{
+      border:2px solid #000;
+!           outline-color: red; Esta propiedad cambia el color del borde a rojo
+      background: #F3F3F3;
+      
+  }
+*/
+
+/* * TABLAS * */
+/*
+Los bordes de la tabla salen al inicio separados, para unirlos tenemos una propiedad llamada border-collapse,se aplica a la table: 
+    collapse    collapse fusiona los bordes de las celdas adyacentes
+    separate    fuerza a que las celdas muestren los 4 bordes / por defecto
+    inherit
+Para controlar la separacion entre celdas se utiliza el border-spacing y se indica o 1 o 2 unidades de medida para la separacion horizontal
+o vertical de las celdas                                                                                                            
+Para tratar las celdas vacias se usa la propiedad empty-cells
+    show        se muestra el hueco con bordes
+    hide        se esconde el hueco sin bordes
+    inherit
+Para poner titulo a la tabla se usa la etiqueta <caption> se usa la propiedad caption-side para controlar la posicion de esta
+    top         Se muestra el titulo arriba
+    bottom      Se muestra el titulo abajo
+    inherit
+
+*/
+
+/* * EFECTOS * */
+
+/*
+?Efectos sobre imagenes | filter: xxx(x);
+  -blur(px)
+  -brithness(%)
+  -contrast(%)
+  -drop-shadow(h-shadow v-shadow blurspread color) Ej: filter:drop-shadow(8px 8px 10px gray)
+  -grayscale(%)
+  -hue-rotate(deg)
+  -invert(%)
+  -opacity(%)
+  -saturate(%)
+  -sepia(%)
+*/
+/*
+?Transformacion de imagenes | transform: xxx(x);
+  -translate(ejex(izq),ejey(arriba))      mueve la caja
+  -rotate(angulodegiro(deg))              gira la caja
+  -scale(ejex(horizontal),ejey(vertical)),los decimales menores a 0 reducen el tamaño     escala la imagen
+  -skew(lados verticales,lados horizontales),los angulos negativos inlinan hacia el lado contrario    inclina la imagen
+  -matrix(x,x,x,x,x,x) Utiliza 6 parametros ,gira y rota la caja.
+    TODO Usar varios valores
+        transform: scale(1.5,0.5)rotate(45deg)
+*/
+
+/*
+? Animaciones
+  Para crear una animacion utilizamos la propiedad animation.Tambien usaremos los keyframes
+      -animation-name: especifica el nombre de la regla @keyframes que describe los fotogramas de la animacion
+      -animation-suration: indica la duracion del ciclo.
+      -animation-delay: tiempo de retardo.
+      -animation-iteration-count:el numero de veces que se repite,puede ser infinite.
+      -animation-play-state:Permite pausar y reanudar la secuencia.
+      -animation-direction:indica como deben ir los fotogramas
+          normal: por defecto,se reproduce hacia delante  
+          reverse:Se reproduce al reves
+          alternate:Se reproduce primero hacia delante y luego hacia atras
+          alternate-reverse:Se reproduce primero hacia delante y despues hacia atras
+      -animation-timing-function:Indica el ritmo de la aplicacion.
+          ease:Por defecto.Inicio lento, se vuelve rapido y termina lento.
+          linear: Misma velocidad de inicio a fin
+          ease-in: Inicio lento
+          ease-out: Final lento
+          ease-in-out: Inicio y final lentos
+      -animation-fill-mode:Especifica que valores tendran despues de la animacion.
+          none:por defecto,ningun estili al elemento
+          forwards:Conservara los valores de estilo por el ultimo fotograma
+          backwards:Conservara los valores de estilo por el primer fotograma
+          both:La animacion seguira las reglas para avanzar y retroceder
+TODO        Animation            --->>                          Shorthand
+        div{
+            animation-name:example;                     
+            animation-duration:5s;
+            animation-timing-function:linear;                      div{
+            animation-delay:2s;                                         animation:example 5s linear 2s infinite alternate;
+            animation-iteration-count:infinite;                    }
+            animation-direction:alternate;
+            
+        }
+
+
+TODO        @Keyframes 
+        @keyframe example{
+            0%{
+                background-color:blue;
+            }
+            50%{
+                transform:translate(10px,100px);
+            }
+            100%{
+                background-color:red;
+            }
+        }
+*/
+
+/*
+?   Transiciones
+        Se usan para animar los cambios en las propiedades Css en vez que los cambios sean instantaneos
+        transition-porperty: nombre de las propiedades que seran animadas durante las transiciones.
+        transition-duration: Especifica la duracion en la que sucederan las transiciones.
+        transition-timing-function:Indica el ritmo de la transicion con curvas de aceleracion
+        transition-delay:tiempo de espera entre el momento que se cambia la propiedad y el inicio de la transicion
+
+TODO        Animation            --->>                          Shorthand
+        div{
+            transition-property:width;                     
+            transition-duration:2s;
+            transition-timing-function:linear;                      div{
+            transition-delay:1s;                                         transition:width 2s linear 1s ;
+            }
+        }
+*/

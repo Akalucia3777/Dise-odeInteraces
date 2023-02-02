@@ -1,0 +1,17 @@
+
+
+li{
+    padding-left: 50px;
+    padding-right: 50px;
+    list-style: none;
+    color:red;
+    display:inline-block;
+    border-left: 1px solid rgb(58, 44, 249);
+    border-right: 1px solid rgb(58, 44, 249);
+    /** Quedaria un hueco si no pongo esto */
+    margin-right:-5px;
+}
+
+li:hover{
+    background-color: rgb(58, 44, 249);
+}

@@ -1,0 +1,16 @@
+
+
+li{
+    width: 200px;
+    border: 1px solid black;
+    list-style-image: url("flecha_inactiva.png");
+    background-color: lightgrey;
+    list-style-position: inside;
+    cursor: pointer;
+    padding: 5px;
+}
+
+li:hover{
+    list-style-image: url("flecha_activa.png");
+    background-color: rgb(170, 171, 171);
+}

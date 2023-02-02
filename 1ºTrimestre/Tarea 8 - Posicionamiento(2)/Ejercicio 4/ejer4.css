@@ -1,0 +1,13 @@
+div{
+    background-color: rgb(251, 156, 129);
+    height: 50px;
+}
+
+#mov{
+    background-color: rgb(255, 238, 0);
+    height: 80px;
+    position: absolute;
+    top: 30px;
+    left: 40px;
+
+}

@@ -1,0 +1,10 @@
+div{
+    background-color: rgb(251, 156, 129);
+    height: 50px;
+}
+
+#mov{
+    position: relative;
+    left: 15px;
+    top: 5px;
+}

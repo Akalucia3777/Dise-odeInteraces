@@ -1,0 +1,127 @@
+/* Inputs */
+select{
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+.sab1D{
+    width:50%;
+    margin-top: 5px;
+    margin-bottom:5px;
+    width: 300px;
+}
+.sab1I{
+    width:50%;
+    margin-top: 5px;
+    margin-bottom:5px;
+    width: 300px;
+}
+.sab1I:focus{
+    background-color: yellow;
+    border:5px solid red;
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.div1{
+    width: 27%;
+    float:left;
+}
+
+.div2{
+    width: 27%;
+    float:left;
+}
+
+
+.div1{
+    background-color: aquamarine;
+    margin-right: 30px;
+}
+.div1 fieldset{
+    margin:10px;
+    height: 440px;
+}
+
+.div2{
+    background-color: chartreuse;
+}
+
+.div2 fieldset{
+    margin:10px;
+    height: 440px;
+}
+
+.colorF1{
+    background-color: chartreuse;
+}
+
+.enLinea{
+    display: inline-block;
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
+
+
+.cat1{
+    margin-top:5px;
+}
+
+
+.complemento{
+    margin-top: 15px;
+}
+
+.bot{
+    display: inline-block;
+}
+
+#boton1D{
+    width: 400px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    color:aliceblue;
+    background-color: rgb(204, 50, 191);
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+#boton2D{
+    width: 400px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: orange;
+}
+
+
+#boton2I{
+    width: 400px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    color:aliceblue;
+    background-color: rgb(204, 50, 191);
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+#boton1I{
+    width: 400px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: orange;
+}

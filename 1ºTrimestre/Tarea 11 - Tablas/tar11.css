@@ -1,0 +1,49 @@
+*{
+    font-family: Arial;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+/* Bordes y padding */
+tr,th,td{
+    border:1px solid #333;
+    text-align: center;
+    padding: 5px;
+}
+
+
+/* Backgrounds con img */
+.col1E{
+    background:#E6F3FF url("euro.png") no-repeat left center;
+
+}
+.col1D{
+    background:#E6F3FF url("dolar.png") no-repeat left center;
+
+}
+.col1L{
+    background:#E6F3FF url("libra.png") no-repeat left center;
+
+}
+.col1Y{
+    background:#E6F3FF url("yen.png") no-repeat left center;
+
+}
+/* Primera fila */
+.row1C{
+    /* Primera columna mas ancha */
+    width: 110px;
+    padding: 5px;
+    background-color: rgb(230, 229, 229);
+}
+.row1{
+    padding: 5px;
+    background-color: rgb(230, 229, 229);
+}
+
+/* Columna resaltada */
+.rowR{
+    background-color: #FFFFCC;
+}

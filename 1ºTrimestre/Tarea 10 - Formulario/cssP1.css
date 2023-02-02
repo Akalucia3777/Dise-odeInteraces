@@ -1,0 +1,112 @@
+li{
+    list-style: none;
+}
+h2{
+    font-size: 60px;
+}
+.tituloN,.tituloD,.tituloE,.tituloT,.tituloE2{
+    font-size: 45px;
+    margin-left:30px;
+}
+
+.tituloD{
+    margin-top: 100px;
+}
+
+.tituloE{
+    margin-top: 250px;
+}
+
+.tituloT{
+    margin-top: 50px;
+}
+
+.requerido{
+    size:60px;
+    color:red;
+}
+
+.datosN{
+    position:absolute;
+    top: 170px;
+    left:400px;
+}
+
+.datosD{
+    position:absolute;
+    top: 390px;
+    left:400px;
+}
+
+.datosE{
+    position:absolute;
+    top: 680px;
+    left:400px;
+}
+
+.datosT{
+    position:absolute;
+    top: 780px;
+    left:400px;
+}
+
+label{
+    display: block;
+    margin:0 0 .5em 0;
+}
+
+input{
+    margin:1em 0 0 0;
+}
+
+input:focus{
+    border: 1px solid red;
+    outline-color: red;
+}
+select:focus{
+    border: 1px solid red;
+    outline-color: red;
+}
+
+#alta{
+    margin:70px 0 0 700px;
+}
+
+form fieldset{
+    width:47%;
+    float:left;
+}
+
+
+.datosN2{
+    position:absolute;
+    top: 170px;
+    right:400px;
+}
+
+.amarillo{
+    background-color: yellow;
+    padding-right:150px;
+    padding-bottom:200px;
+}
+
+.tituloE2{
+    margin-top: 30px;
+}
+.datosD2{
+    position:absolute;
+    top: 390px;
+    right:400px;
+}
+
+.datosE2{
+    position:absolute;
+    top: 680px;
+    right:400px;
+}
+
+.datosT2{
+    position:absolute;
+    top: 780px;
+    right:400px;
+}

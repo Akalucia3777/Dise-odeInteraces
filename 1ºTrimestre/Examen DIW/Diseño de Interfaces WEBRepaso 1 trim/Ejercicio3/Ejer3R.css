@@ -1,0 +1,45 @@
+body{
+    background: url(../imgs/fondo.jpg) no-repeat;
+}
+
+img{
+    height: 23px;
+    position: absolute;
+    top: 119px;
+    left: 110px;
+    animation: pacman 10s normal;
+}
+
+@keyframes pacman {
+    
+    10%{
+        transform: translate(87px,0);
+    }
+    20%{
+        transform: translate(87px,230px);
+    }
+    30%{
+        transform: translate(165px,230px);
+    }
+    40%{
+        transform: translate(165px,265px);
+    }
+    50%{
+        transform: translate(195px,265px);
+    }
+    60%{
+        transform: translate(195px,230px);
+    }
+    70%{
+        transform: translate(275px,230px);
+    }
+    80%{
+        transform: translate(275px,230px);
+    }
+    90%{
+        transform: translate(275px,39px);
+    }
+    100%{
+        transform: translate(9px,39px);
+    }
+}

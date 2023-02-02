@@ -1,0 +1,81 @@
+body{
+    background-color: #BEBEBE;
+}
+li{
+    /*margenes*/
+    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 15px;
+    padding-left: 45px;
+    /*Anchura */
+    width: 300px;
+    /*Fuente y tamaño de esta*/
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    /*Alineacion del texto*/
+    text-align: left;
+    /*Color de fondo*/
+    background-color: #9394F5;
+    /*Borde*/
+    border:2px solid #5052F8;
+
+    list-style: none;
+    list-style-position: inside;
+
+    transition:width 1s;
+}
+/*Para tratar el enlace*/
+a{
+    text-decoration: none;
+    color:#5052f8;
+}
+
+/*Fondo*/
+.fresas{
+    background:#9394F5 url(fresa.ico)  no-repeat center left ;
+}
+
+.cerezas{
+    background:#9394F5 url(cereza.ico)  no-repeat center left ;
+}
+
+.platanos{
+    background:#9394F5 url(platano.ico)  no-repeat center left ;
+}
+
+.arandanos{
+    background:#9394F5 url(arandano.ico)  no-repeat center left ;
+}
+
+/*Cuando pasa por un li este se hace grande y cambia el background a la vez que mueve el texto al centro*/
+/* Cuando pasa por encima del enlace este se muestra blanco*/
+.fresas:hover,a:hover{
+    background-color: #494cf7;
+    width: 400px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.cerezas:hover{
+    background-color: #494cf7;
+    width: 400px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.platanos:hover{
+    background-color: #494cf7;
+    width: 400px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.arandanos:hover{
+    background-color: #494cf7;
+    width: 400px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+

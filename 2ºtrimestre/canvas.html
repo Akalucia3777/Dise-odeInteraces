@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    canvas {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="drawingCanvas" width="400" height="400"></canvas>
+  <br>
+  Tool:
+  <select id="toolSelect">
+    <option value="pen">Pen</option>
+    <option value="line">Line</option>
+    <option value="rectangle">Rectangle</option>
+    <option value="circle">Circle</option>
+  </select>
+  <br>
+  Color:
+  <input type="color" id="colorSelect">
+  <br>
+  <button onclick="clearCanvas()">Clear</button>
+  <script>
+    const canvas = document.getElementById("drawingCanvas");
+    const ctx = canvas.getContext("2d");
+    const toolSelect = document.getElementById("toolSelect");
+    const colorSelect = document.getElementById("colorSelect");
+    let isDrawing = false;
+    let x = 0;
+    let y = 0;
+
+    canvas.addEventListener("mousedown", e => {
+      x = e.offsetX;
+      y = e.offsetY;
+      isDrawing = true;
+    });
+
+    canvas.addEventListener("mousemove", e => {
+      if (isDrawing) {
+        draw(x, y, e.offsetX, e.offsetY);
+        x = e.offsetX;
+        y = e.offsetY;
+      }
+    });
+
+    canvas.addEventListener("mouseup", () => (isDrawing = false));
+
+    function draw(x1, y1, x2, y2) {
+      const tool = toolSelect.value;
+      const color = colorSelect.value;
+      ctx.strokeStyle = color;
+
+      if (tool === "pen") {
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.stroke();
+      } else if (tool === "line") {
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.stroke();
+      } else if (tool === "rectangle") {
+        ctx.beginPath();
+        ctx.rect(x1, y1, x2 - x1, y2 - y1);
+        ctx.stroke();
+      } else if (tool === "circle") {
+        ctx.beginPath();
+        const radius = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+        ctx.arc(x1, y1, radius, 0, 2 * Math.PI);
+        ctx.stroke();
+      }
+    }
+
+    function clearCanvas() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+  </script>
+</body>
+</html>

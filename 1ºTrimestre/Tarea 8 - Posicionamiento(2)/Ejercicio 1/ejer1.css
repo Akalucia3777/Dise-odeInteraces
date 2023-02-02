@@ -1,0 +1,19 @@
+div{
+    height: 600px;
+}
+
+#col1{
+    background-color: rgb(255, 238, 0);
+    position: absolute;
+    width: 200px;
+    top: 0px;
+    left: 0px;
+}
+
+#col2{
+    background-color: rgb(236, 249, 124);
+    position: absolute;
+    width: 520px;
+    top: 0px;
+    left: 220px;
+}

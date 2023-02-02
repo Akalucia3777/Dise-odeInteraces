@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contacto</title>
+    <link rel="icon" type="image/x-icon" href="daw.png">
+    <link rel="stylesheet" href="contacto.css">
+</head>
+<body marginwidth="0" marginheight="0" scroll="no">
+                                                                <!-- &nbsp; Para dejar un espacio -->
+    <table id="enca">
+        <tr>
+            <th id="encabimg"><a href="index.html" id="limg"><img src="daw.png" id="img1"></a></th>
+            <th colspan="2" id="titulo">Diseño de interfaces</th>  
+        </tr>
+        <tr>
+            <th class="encabezado"><a href="daw.html" id="lcab">2ºDAW</a></th>
+            <th class="encabezado"> <a href="somos.html" id="lcab">Quienes Somos</a></th>
+            <th class="encabezado"><a href="contacto.html" id="lcab">Contacto</a></th>
+        </tr>
+    </table>
+
+    <h3 class="tit1">¿Quieres saber mas? Contacta con nosotros</h3>
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+        &nbsp;
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido">
+
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        &nbsp;
+
+        <label for="cum">Cumpleaños:</label>
+        <input type="date" id="cum" name="cum">
+
+        <br><br>
+
+        <label for="prov">Provincia:</label>
+        <select id="prov" name="provincias">
+        <option value="madrid">Madrid</option>
+        <option value="CCMM">CCMM</option>
+        <option value="asturias">Asturias</option>
+        <option value="cataluña">Cataluña</option>
+        </select>
+
+        <br><br>
+
+        <label for="mensage">Escribenos:</label><br>
+        <textarea name="mensage" rows="10" cols="30" placeholder="¿Que quieres saber?"></textarea>
+        
+        <br><br>
+        <label for="elige">¿Ya nos conocemos?:</label><br>
+        <input type="radio" id="alu" name="fav_language" value="alu">
+
+        <label for="alu">Ya soy alumno</label><br>
+        <input type="radio" id="noalu" name="fav_language" value="noalu">
+        <label for="noalu">No soy alumno</label><br>
+        <input type="radio" id="pad" name="fav_language" value="pad">
+        <label for="pad">Soy padre</label>
+
+        <br><br>
+
+        <label for="myfile">¿Quieres incluir algo?:</label>
+        <input type="file" id="myfile" name="myfile">
+
+        <br><br>
+
+        <button type="button" onclick="alert('Enviado!')">Enviar</button>
+        <input type="reset">
+      </form>
+</body>
+</html>
