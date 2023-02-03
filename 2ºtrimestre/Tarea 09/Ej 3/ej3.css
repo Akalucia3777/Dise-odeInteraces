@@ -1,0 +1,117 @@
+#contenedor{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#sup{
+    background-color: blueviolet;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+#cajas{
+    font-size: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+#cajizq{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+#cajder{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+
+}
+.cajas{
+    background-color: orange;
+    width: 50%;
+    height: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border: 1px black solid;
+}
+
+#inf{
+    display: flex;
+    flex-direction: row;
+}
+
+#amar{
+    background-color: yellow;
+    width: 60%;
+    height: 800px;
+}
+
+#rosa{
+    background-color: pink;
+    width: 40%;
+    height: 800px;
+}
+
+@media (max-width:700px) {
+    #cajizq,#cajder{
+        width: 100%;
+    }
+    #sup{
+        height: 320px;
+    }
+    #cajas{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .cajas{
+        margin: 30px;
+        height: 30px;
+        padding: 10px 90px 10px 90px;
+    }
+
+}
+
+@media (max-width:400px) {
+    #sup{
+        font-size: 35px;
+    }
+    #cajizq,#cajder{
+        width: 100%;
+    }
+    #cajas{
+        width: 100%;
+        flex-direction: column;
+    }
+    #sup{
+        height: 470px;
+    }
+    #cajizq,#cajder{
+        flex-direction: column;
+    }
+    .cajas{
+        height: 30px;
+        padding: 5px 50px 5px 50px;
+    }
+
+    #inf{
+        display: flex;
+        flex-direction: column;
+    }
+    #amar{
+        width: 100%;
+        height: 200px;
+    }
+    
+    #rosa{
+        width: 100%;
+        height: 100px;
+    }
+}

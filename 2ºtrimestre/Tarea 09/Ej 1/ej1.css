@@ -1,60 +1,67 @@
-div{
+
+/* Al contenedor de todo le pongo display flex y un width 100 para que ocupe toda la pagina */
+#contenedor{
     display: flex;
+    width: 100%;
 }
 
+/* Pongo los estilos de los 3 cuadrados */
 #cuad1{
-    width: 100%;
+    width: 60%;
     height: 200px;
     background-color: blue;
     font-size: 50px;
     color:white;
 }
 
+
+
 #cuad2{
-    width: 50%;
+    width: 70%;
     height: 100px;
     background-color: yellow;
     font-size: 45px;
 }
 
 #cuad3{
-    width: 50%;
+    width: 30%;
     height: 50px;
     background-color: pink;
     font-size: 30px;
     order:2;
 }
+/* Al contenedor que tiene los 2 ultimos cuadrados le pongo un display flex y un direction para que se muestre en linea */
+#lad{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+}
 
 
 @media (max-width:700px) {
-    
+    #cuad2{
+        width: 100%;
+    }
+
+    #cuad3{
+        width: 50%;
+    }
+     /* Al div que contiene los 2 ultimos cuadrados le pongo la direction column para que se muestre uno debajo del otro, antes de cambio los widths */
+    #lad{
+        flex-direction: column;
+    }
     
 
 }
 
 @media (max-width:400px) {
+    /* Le pongo a todo un column como antes y les cambio los widtch al 100% para que ocupen todo el ancho de la pag */
     div{
         width: 100%;
         display: flex;
         flex-direction: column;
     }
-    #cuad1{
+    #lad,#cuad1,#cuad3{
         width: 100%;
-        height: 200px;
-        background-color: blue;
-        font-size: 50px;
-    }
-    #cuad2{
-        width: 100%;
-        height: 100px;
-        background-color: yellow;
-        font-size: 45px;
-    }
-
-    #cuad3{
-        width: 100%;
-        height: 50px;
-        background-color: pink;
-        font-size: 30px;
     }
 }
